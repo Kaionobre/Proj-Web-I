@@ -3,4 +3,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
 
+a:hover{
+    text-decoration: none;
+    color: gray;
+    transition: 900ms;
+}
+
+.titulo{
+    color: aliceblue;
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    font-style: normal;
+    display: flex;
+    justify-content: left;
+    padding-left: 15px;
+}
+
+.barra-pesquisa{
+    margin-left: auto;
+    padding-right: 70px;
+    font-family: "Share Tech", sans-serif;
+    position: relative;
+}
+
+.caixa-pesquisa{
+    border-radius: 8px;
+    padding-right: 40px;
+}
+
+.botao-pesquisa{
+    border: none;
+    background-color: transparent;
+}
+
+.icon-inline {
+    width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+    fill: aliceblue; /* Cor do ícone */
+}
+
+.icon-lg{
+    width: 15px;
+    
+}
+
+.botoes-login{
+    color: aliceblue;
+    font-family: "Share Tech", sans-serif;
+}
