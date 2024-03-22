@@ -85,3 +85,35 @@ a:hover{
 .item-categoria:hover{
     transform: scale(1.1);
 }
+
+.receba-informacoes{
+    font-family: "Share Tech", sans-serif;
+    background-color: black;
+    color: aliceblue;
+    margin: 0 auto;
+    text-align: center;
+    padding: 45px;
+}
+
+.caixa-email{
+    margin: 0 auto;
+    font-family: "Share Tech", sans-serif;
+    width: 30%;
+}
+
+.botao-email{
+    padding: 20px;
+}
+
+hr{
+    margin: 0 auto;
+    background-color: black;
+}
+
+.assinatura{
+    color: #dcdcdc;
+    align-items: center;
+    padding-top: 3px;
+    background-color: black;
+    font-family: "Share Tech", sans-serif;
+}
