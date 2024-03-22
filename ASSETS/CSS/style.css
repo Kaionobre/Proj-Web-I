@@ -22,7 +22,7 @@ a:hover{
     font-style: normal;
     display: flex;
     justify-content: left;
-    padding-left: 15px;
+    padding-left: 35px;
 }
 
 .barra-pesquisa{
@@ -43,8 +43,8 @@ a:hover{
 }
 
 .icon-inline {
-    width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
-    fill: aliceblue; /* Cor do ícone */
+    width: 20px; 
+    fill: aliceblue; 
 }
 
 .icon-lg{
@@ -79,4 +79,9 @@ a:hover{
 
 .item-categoria{
     padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-categoria:hover{
+    transform: scale(1.1);
 }
