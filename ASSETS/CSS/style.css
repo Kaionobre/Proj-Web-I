@@ -10,7 +10,7 @@ a{
 
 a:hover{
     text-decoration: none;
-    color: gray;
+    color: azure;
     transition: 900ms;
 }
 
@@ -34,7 +34,7 @@ a:hover{
 
 .caixa-pesquisa{
     border-radius: 8px;
-    padding-right: 40px;
+    padding-right: 57px;
 }
 
 .botao-pesquisa{
@@ -62,7 +62,7 @@ a:hover{
     font-family: "Share Tech", sans-serif;
     font-size: 25px;
     text-align: center;
-    padding: 10px;
+    padding: 30px;
 
 }
 
