@@ -234,3 +234,45 @@ hr{
     color: black;
     font-weight: 600;
 }
+
+.section_4_content{
+    margin-top: 2rem;
+    display: flex;
+    padding: 0.6rem 2rem 0.6rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+
+#title_secao4{
+    font-weight: 900;
+}
+
+#text_04{
+    width: 30rem;
+    margin-top: 2.2rem;
+    font-size: 20px;
+}
+
+#desenho_secao{
+    height: 35rem;
+}
+
+.botoes_roupas{
+    background-color: #c0c0c0;
+    padding: 1.1rem;
+    border-radius: 1.2rem;
+    width: 12rem;
+    border: none;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    
+}
+
+.botoes_roupas:hover{
+    transition: 0.2s ease-in;
+    background-color: #000000;
+    color: white;
+
+}
