@@ -86,28 +86,28 @@
                     <img src="https://th.bing.com/th/id/R.deef6ba12e5678eb2267ecfc5188586c?rik=XX7trz2YSO4Q4Q&pid=ImgRaw&r=0"  class="imagens_preferidos cam_01" alt="">
                     <h4 class="prefer_titles">Camisa branca HIJACKED</h4>
                     <p>R$ XXX, XX</p>
-                    <button class="bot_comprar">Comprar</button>
+                    <button class="bot_comprar" id="comprar01">Comprar</button>
                 </div>
                    
                 <div class="image_box_pref">
                     <img src="https://th.bing.com/th/id/OIP.KFPlQ9J1Hqrc0Q8bbkjW-gHaJd?w=513&h=655&rs=1&pid=ImgDetMain" alt="" class="imagens_preferidos cam_02">
                     <h4 class="prefer_titles">Camisa PRETA PIC/NYC</h4>
                     <p>R$ XXX, XX</p>
-                    <button class="bot_comprar">Comprar</button>
+                    <button class="bot_comprar" id="comprar02">Comprar</button>
                 </div>
 
                 <div class="image_box_pref">
                     <img src="https://static.rockcity.com.br/public/rockcity/imagens/produtos/bermuda-shorts-high-company-adjustable-running-khaki-73874.jpg" alt="" class="imagens_preferidos shorts">
                     <h4 class="prefer_titles">Shorts HIGH Light Brown</h4>
                     <p>R$ XXX, XX</p>
-                    <button class="bot_comprar">Comprar</button>
+                    <button class="bot_comprar" id="comprar03">Comprar</button>
                 </div>
 
                 <div class="image_box_pref">
                     <img src="https://th.bing.com/th/id/OIP.TepQppFGfrmHSnXZDcFXtAHaJC?w=171&h=209&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" class="imagens_preferidos" >
                     <h4 class="prefer_titles">Shoulder bag NIKE Air</h4>
                     <p>R$ XXX, XX</p>
-                    <button class="bot_comprar">Comprar</button>
+                    <button class="bot_comprar" id="comprar04">Comprar</button>
                 </div>
                 <div class="icone passar">
                     
@@ -159,14 +159,32 @@
         </div>
     </footer>
     <script>
+        //BOTÕES DE FORMULÁRIO
         const botao_enviar = document.querySelector(`#botao_enviar`);
         const form_name = document.querySelector(`.name_box `);
         const form_email = document.querySelector(`.email_box`);
-
+        //BOTÕES DE COMPRA
+        const botao_comprar = document.querySelector(`#comprar01`);
+        const botao_comprar02 = document.querySelector(`#comprar02`);
+        const botao_comprar03 = document.querySelector(`#comprar03`);
+        const botao_comprar04 = document.querySelector(`#comprar04`);
         
-
+        //EVENTOS ATRELADOS AOS BOTÕES DE FORMULÁRIO
         botao_enviar.addEventListener(`click`, function(){
             alert(`FORMULÁRIO ENVIADO`)
+        })
+        //EVENTOS ATRELADOS AOS BOTÕES DE COMPRA
+        botao_comprar.addEventListener(`click`, function(){
+            alert(`CAMISA BRANCA CLICADA`);
+        })
+        botao_comprar02.addEventListener(`click`, function(){
+            alert(`CAMISA PRETA CLICADA`);
+        })
+        botao_comprar03.addEventListener(`click`, function(){
+            alert(`SHORT HIGH CLICADO`);
+        })
+        botao_comprar04.addEventListener(`click`, function(){
+            alert(`SHOULDER BAG CLICADA`);
         })
     </script>
 </body>
