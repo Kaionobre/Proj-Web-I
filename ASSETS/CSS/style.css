@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 a{
     text-decoration: none;
     color: aliceblue;
@@ -77,6 +78,10 @@ a:hover{
     background-color: #dcdcdc;
 }
 
+#categoria{
+    font-weight: 900;
+}
+
 .item-categoria{
     padding: 15px;
     transition: transform 0.3s ease-in-out;
@@ -93,6 +98,14 @@ a:hover{
     margin: 0 auto;
     text-align: center;
     padding: 45px;
+}
+.inp{
+    padding: 8px;
+    width: 20rem;
+    border-radius: 8px;
+    border: none;
+
+
 }
 
 .caixa-email{
@@ -111,9 +124,89 @@ hr{
 }
 
 .assinatura{
-    color: #dcdcdc;
+    color: #000000;
     align-items: center;
     padding-top: 3px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     font-family: "Share Tech", sans-serif;
+}
+
+.form_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+#second_section{
+    background-color: #dcdcdc;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sect{
+    padding: 4rem;
+    max-width: 50rem;
+}
+
+#time{
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+#tit_shizzy{
+    margin-top: 11rem;
+}
+
+.shiz{
+    width: 25rem;
+}
+.images{
+    max-width: 40rem;
+    max-height: 15rem;
+}
+
+.kev{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    width: 25rem;
+    
+}
+
+.third_section{
+    padding: 1.4rem;
+    background-color: #ffffff
+}
+
+
+#desejados{
+    font-family: "Share Tech", sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    margin-top: 1.2rem;
+    
+}
+
+.content_box{
+    padding: 0 5rem 0 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row; 
+}
+
+.imagens_preferidos{
+    max-height: 17rem;
+    width: 15rem;
+    transition: transform 0.3s ease-in-out;
+}
+.imagens_preferidos:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.shorts{
+    height: 17rem;
 }
