@@ -305,6 +305,38 @@ hr{
     color: white;
 }
 
+
+
+
+.mais-informacoes{
+    font-family: "Share Tech", sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.caixa-informacoes{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row;
+}
+
+
+.item-caixa-informacoes{
+    text-align: center;
+    justify-content: baseline;
+}
+.caminhao-frete{
+    width: 100px;
+}
+
+
+
+
+
+
+
+
 #conteudo_redes{
     background-color: #c0c0c0;
     display: flex;
