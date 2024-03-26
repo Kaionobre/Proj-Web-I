@@ -8,6 +8,11 @@ const botao_comprar02 = document.querySelector(`#comprar02`);
 const botao_comprar03 = document.querySelector(`#comprar03`);
 const botao_comprar04 = document.querySelector(`#comprar04`);
 
+//BOTÕES DE ICONES
+const iconesIG = document.querySelector(`.ig`);
+const iconesYT = document.querySelector(`.yt`);
+const iconesWPP = document.querySelector(`.wpp`);
+
 //EVENTOS ATRELADOS AOS BOTÕES DE FORMULÁRIO
 botao_enviar.addEventListener(`click`, function(){
     alert(`FORMULÁRIO ENVIADO`)
@@ -24,4 +29,15 @@ botao_comprar03.addEventListener(`click`, function(){
 })
 botao_comprar04.addEventListener(`click`, function(){
     alert(`SHOULDER BAG CLICADA`);
+})
+
+//EVENTOS ATRELADOS AOS BOTÕES DE REDES SOCIAIS
+iconesIG.addEventListener(`click`, function(){
+    confirm(`Tem certeza que quer sair dessa página e ir para o INSTAGRAM EMBER?`);
+})
+iconesYT.addEventListener(`click`, function(){
+    confirm(`Tem certeza que quer sair dessa página e ir para o YOUTUBE EMBER?`);
+})
+iconesWPP.addEventListener(`click`, function(){
+    confirm(`Tem certeza que quer sair dessa página e ir para o WHATSAPP EMBER?`);
 })
