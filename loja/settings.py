@@ -27,11 +27,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Media definition
+
+
 
 # Application definition
 APPS = [
     'cliente',
     'produto',
+    'accounts',
+    'sugestion'
 ]
 
 
