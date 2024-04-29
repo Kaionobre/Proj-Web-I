@@ -7,6 +7,6 @@ class Produto(models.Model):
     preco = models.CharField(max_length=15)
     tamanho = models.CharField(max_length=5)
     descricao = models.TextField()
-    #image = models.imageField()
+    image = models.ImageField(upload_to='produto/', null=True, blank=True)
 
 
