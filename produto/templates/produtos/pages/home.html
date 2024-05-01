@@ -39,8 +39,16 @@
             </div>
 
             <div class="botoes-login">
-                <button type="button" class="btn btn-dark">Login</button>
-                <button type="button" class="btn btn-dark">Cadastro</button>
+                <button type="button" class="btn btn-dark">
+                    <a href="{% url 'login' %}">
+                        Login
+                    </a>
+                </button>
+                <button type="button" class="btn btn-dark">
+                    <a href ="{% url 'cadastro'%}">
+                    Cadastro
+                    </a>
+                </button>
             </div>
 		</nav>
         
@@ -203,12 +211,9 @@
         <section class="receba-informacoes">
             <div class="infomacoes">
                 <h1>Receba Todas as informações</h1>
-                <p>Cadastre-se e receba todas as ofertas</p>
+                <p>Assine e receba todas as ofertas</p>
             </div>
             <div class="form_box">
-                <div class="caixa_nome">
-                    <input type="name" class="inp name_box" name="nome" placeholder="Nome">
-                </div>
                 <div class="caixa-email">
                     <input type="email" class="inp email_box" name="email" placeholder="E-mail">
                 </div>

@@ -1,5 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def notas(request):
+def home(request):
     return render(request, 'produtos/pages/home.html')

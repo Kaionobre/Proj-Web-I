@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Login</title>
 </head>
 <body>
     <h1>Faça login</h1>
 
-    <form action=" {% url "accounts:login" %}" method="POST"> {% csrf_token %}
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
 
-        <div class="email-text-box">
-            <input type="email" class="input-login", placeholder="E-mail", name="email">
-        </div>
+        {% for field in form.visible_fields  %}
 
-        <div class="senha-text-box">
-            <input type="password" class="input-login", placeholder="Senha", name="senha">
+        <div>
+            <label for="{{ form.id_for_label }}">{{field.label}}</label>
+            {{ field }}
         </div>
         
-        <div class="entrar">
-            <input type="submit" value='Entrar' class="botao-cadastrar">
+        {% endfor %}
+
+
+        <div>
+            <button type="submit">
+                Logar
+            </button>
         </div>
     </form>
 </body>

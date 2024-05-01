@@ -1,47 +1,64 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from accounts.forms import LoginForms, CadastroForms
 from django.contrib.auth.models import User
-from django.contrib import messages  # para exibir mensagens ao usuário
+from django.contrib import auth
+
 
 def login(request):
-    if request.method == "POST":
-        email = request.POST.get('email')
-        senha = request.POST.get('senha')
+    form = LoginForms()
+    if request.method == 'POST':
+        form = LoginForms(request.POST)
 
-        usuario = authenticate(email=email, password=senha)
+        if form.is_valid():
+            nome = form['nome_login'].value()
+            senha = form['senha'].value()
 
-        if usuario:
-            login(request, usuario)
-            messages.success(request, 'Você entrou com sucesso!')  
-            return redirect('home')  
+        usuario = auth.authenticate(
+            request,
+            username = nome,
+            password = senha
+        )
+
+        if usuario is not None:
+            auth.login(request, usuario)
+            return redirect('home')
         else:
-            messages.error(request, 'ERRO: Login inválido. Verifique seu e-mail e senha.')
-            return render(request, 'accounts/pages/login.html')
-    else:
-        return render(request, 'accounts/pages/login.html')
+            return redirect('login')
+
+
+    return render(request, 'accounts/pages/login.html', {"form": form})
+
+
 
 def cadastro(request):
-    if request.method == "POST":
-        nome = request.POST.get('nome')  
-        email = request.POST.get('email')
-        senha = request.POST.get('senha')
+    form = CadastroForms()
 
-        usuario = User.objects.filter(email=email).first()
+    if request.method == 'POST':
+        form = CadastroForms(request.POST)
 
-        if usuario:
-            messages.error(request, 'Já existe um usuário com este e-mail.')
-            return render(request, 'accounts/pages/cadastro.html')
+        if form.is_valid():
 
-        usuario = User.objects.create_user(username=email, email=email, password=senha)
-        usuario.save()
+            if form["senha_1"].value() != form["senha_2"].value():
+                return redirect('cadastro')
+            
+            nome = form["nome_cadastro"].value()
+            email = form["email"].value()
+            senha = form["senha_1"].value()
 
-        messages.success(request, 'Usuário cadastrado com sucesso!')
-        return redirect('login')  
+            if User.objects.filter(username=nome).exists():
+                return redirect('cadastro')
+            
+            usuario = User.objects.create_user(
+                username=nome,
+                email=email,
+                password=senha,
+            )
 
-    else:
-        return render(request, 'accounts/pages/cadastro.html')
+            usuario.save()
 
-def logout(request):
-    logout(request)
-    messages.success(request, 'Você saiu com sucesso.')
-    return redirect('login')  
+            return redirect('login')
+        
+
+    return render(request, 'accounts/pages/cadastro.html', {"form": form})
+
+
