@@ -90,24 +90,28 @@
             </div>
         </div>
 
-        <section class="third_section">
-            <h2 id="desejados">ITENS MAIS DESEJADOS</h2>
-            <div class="content_box">
-                {% for produto in produtos %}
+            <section class="third_section">
+                <h2 id="desejados">ITENS MAIS DESEJADOS</h2>
+                <div class="content_box">
+                    <div class="produtos">
+                        
+                        {% for produto in produtos %}
 
-                <div class="image_box_pref">
-                    <img src="{{ produto.image.url }}" class="imagens_preferidos" alt="">
-                    <h4 class="prefer_titles">{{ produto.nome }}</h4>
-                    <p>R$ {{ produto.preco }}</p>
-                    <button class="bot_comprar">Comprar</button>
+                        <div class="image_box_pref">
+                            <img src="{{ produto.image.url }}" class="imagens_preferidos" alt="">
+                            <h4 class="prefer_titles">{{ produto.nome }}</h4>
+                            <p>R$ {{ produto.preco }}</p>
+                            <button class="bot_comprar">Comprar</button>
+                        </div>
+        
+
+                        {% endfor %}
+                    </div>
+
+
                 </div>
 
-                {% endfor %}
-            </div>
-
-
-
-        </section>
+            </section>
 
         <section id="second_section">
             <div class="sect left">

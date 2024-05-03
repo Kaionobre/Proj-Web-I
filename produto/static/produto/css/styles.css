@@ -190,12 +190,21 @@ hr{
     
 }
 
+
+
+
 .content_box{
     padding: 0 5rem 0 5rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row; 
+    display: grid;
+    flex-direction: column; 
     align-items: center;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem; 
+    justify-content: center; 
 }
 
 .imagens_preferidos{
@@ -203,10 +212,17 @@ hr{
     width: 15rem;
     transition: transform 0.3s ease-in-out;
 }
+
 .imagens_preferidos:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
+
+.image_box_pref {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 .shorts{
     height: 17rem;
