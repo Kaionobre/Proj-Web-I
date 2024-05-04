@@ -1,13 +1,15 @@
 *{
-    font-family: 'roboto', sans-serif;
     box-sizing: border-box;
+    padding: 0;
+    font-family: 'roboto', sans-serif;
 }
 
 body{
-    background-color: rgb(235, 235, 235);
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(237, 237, 237);
 }
 
 .content_section{
@@ -18,22 +20,19 @@ body{
     height: 500px;
     width: 1100px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
-}
-
-#bem_vindo{
-    text-align: center;
+    border-radius: 10px;
 }
 
 .left_content{
-    background-image: url(../img/equipe-de-producao-desenhada-a-mao-em-preto-e-branco-design-de-arte-doodle.png);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding: 10px;
     background-color: black;
     color: white;
-    width: 100%;
+    width: 50%;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -42,54 +41,42 @@ body{
 
 
 .form_box{
-    padding: 100px;
+    margin-top: 70px;
+    align-self: flex-start;
+    margin-right: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    gap: 12px;
 }
 
-.labels_div{
-    padding: 10px;
+#cadastre-se{
+    text-align: center;
+    font-size: 30px;
 }
 
-.labels{
-    padding: 10px;
-    height: 100px;
-}
-
-.form{
+.forms{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
 }
 
-#botao_login{
-    font-weight: 500;
-    margin-top: 10px;
-    width: 80px;
-    padding: 10px;
-    border-radius: 6px;
-    margin: none;
-    background-color: black;
+
+
+#botao_cadastrar{
     color: white;
+    background-color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 40px;
     transition: 0.2s ease-in-out;
 }
-#botao_login:hover{
-    cursor: pointer;
+
+#botao_cadastrar:hover{
+    
     cursor: pointer;
     background-color: rgb(220, 220, 220);
     color: black;
 }
-
-#login{
-    padding: 10px;
-    width: 300px;
-    height: 60px;
-    border-radius: 6px;
-    background-color: rgb(229, 229, 229);
-    text-align: center;
-}
-

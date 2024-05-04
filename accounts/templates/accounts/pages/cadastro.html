@@ -1,31 +1,51 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/registerstyle.css' %}">
 </head>
 <body>
-    <h1>Cadastre-se</h1>
+    <div class="content_section">
 
-    <form action="{% url 'cadastro' %}" method="POST">
-        {% csrf_token %}
-        
-        {% for field in form.visible_fields  %}
-
-        <div>
-            <label for="{{ form.id_for_label }}">{{field.label}}</label>
-            {{ field }}
+        <div class="left_content">
+            <h3 id="bem_vindo">SEJA BEM VINDO!</h3>
+            <p>Venha fazer parte do nosso time de consumidores, seus benefícios tornarão sua <br> caminhada
+            ainda mais inesquecível por aqui</p>
         </div>
+
+        <div class="form_box">
+
+            <h3 id="cadastre-se">CADASTRE-SE</h3>
+            <form action="{% url 'cadastro' %}" method="POST" class="forms">
+                {% csrf_token %}
+                
+                {% for field in form.visible_fields  %}
         
-        {% endfor %}
+                <div id="label_box">
+                    <label id="labels" for="{{ form.id_for_label }}">{{field.label}}</label>
+                    {{ field }}
+                </div>
+                
+                {% endfor %}
+    
+
+            </form>
 
 
-        <div>
-            <button type="submit">
-                Cadastrar
-            </button>
+            <div class="botão_submit">
+                <button type="submit" id="botao_cadastrar">
+                    Cadastrar
+                </button>
+            </div>
+
+
         </div>
-    </form>
+
+
+    </div>
 </body>
 </html>
+
