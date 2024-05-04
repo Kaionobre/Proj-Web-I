@@ -144,11 +144,10 @@
         </section>
         <section class="interacao_cliente">
             <div class="interacao_content">
-                <div id="text_interacao">
-                    <h2 id="ideias_title">Ideias? Aceitamos sua sugestão:</h2>
-                    <p>Mostre-nos sua criatividade e envie novas ideias para estampas abaixo</p>
-                    <textarea name="sugestao_txt" id="caixa_ideias" cols="80" rows="5"></textarea>
-                </div>
+                <p>Clique para acessar a página de sugestões:</p>
+                <button type="button" id="botao-sugestoes"> 
+                    <a href="{% url 'sugestion_list' %}" >Sugestões</a>
+                </button>
             </div>
         </section>
         <section class="mais-informacoes">
