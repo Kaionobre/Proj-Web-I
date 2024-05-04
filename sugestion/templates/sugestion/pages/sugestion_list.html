@@ -11,8 +11,7 @@
     <h1>LISTA DE SUGESTÕES:</h1>
     <ul>
         {% for sugestion in sugestion %}
-            <li><a href="{% url 'sugestion_detail' pk=sugestion.pk %}">{{
-        sugestion.nome }}</a></li>
+            <li><a href="{% url 'sugestion_detail' pk=sugestion.pk %}">{{sugestion.nome }}</a></li>
         {% endfor %}
     </ul>
        
