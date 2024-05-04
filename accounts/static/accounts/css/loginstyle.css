@@ -1,0 +1,89 @@
+*{
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_section{
+    margin-top: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 1100px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+#bem_vindo{
+    text-align: center;
+}
+
+.left_content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.form_box{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.labels_div{
+    padding: 10px;
+}
+
+.labels{
+    padding: 10px;
+    height: 100px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#botao_login{
+    font-weight: 500;
+    margin-top: 10px;
+    width: 80px;
+    padding: 10px;
+    border-radius: 6px;
+    margin: none;
+    background-color: black;
+    color: white;
+}
+#botao_login:hover{
+    cursor: pointer;
+}
+
+#login{
+    padding: 10px;
+    width: 300px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: rgb(229, 229, 229);
+    text-align: center;
+}
+

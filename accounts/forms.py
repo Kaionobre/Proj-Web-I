@@ -3,21 +3,21 @@ from django import forms
 
 class LoginForms(forms.Form):
     nome_login = forms.CharField(
-        label="Nome de Login",
+        label="Nome",
         required=True,
-        max_length=100
+        max_length=500
     )
     senha = forms.CharField(
-        label="senha",
+        label="Senha",
         required=True,
-        max_length=70,
+        max_length=500,
         widget=forms.PasswordInput()
     )
 
 
 class CadastroForms(forms.Form):
     nome_cadastro=forms.CharField(
-        label="Nome de Cadastro",
+        label="Nome",
         required=True,
         max_length=100,
         widget=forms.TextInput(
@@ -28,7 +28,7 @@ class CadastroForms(forms.Form):
     )
 
     email=forms.EmailField(
-        label="E-mail de Cadastro",
+        label="E-mail",
         required=True,
         max_length=100,
         widget=forms.TextInput(
