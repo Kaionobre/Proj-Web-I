@@ -2,20 +2,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deletar</title>
+    {% include 'produtos/partials/head.html' %}
+
     <link rel="stylesheet" href="{% static 'sugestion/css/sugestiondelete.css' %}">
 </head>
 <body>
-    <h1>Deletar Sugestão</h1>
-    <p>Você tem certeza que deseja excluir o post "{{ sugestion.nome }}"?</p>
-    <form action="{% url 'sugestion_delete' pk=object.pk %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Confirmar</button>
-    </form>
-    <footer>
-        <p>&copy; 2024 EMBER. Desenvolvido por Kaio Nóbrega e Felipe Marinho.</p>
-    </footer>
+
+    {% include 'produtos/partials/header.html' %}
+    <main>
+        <div class="main_content">
+
+            <div class="titulo_delete">
+                <h1 class="titulo_delete">Deletar Sugestão</h1>
+            </div>
+
+            <div>
+                <p class="texto_delete">Gostaria mesmo de deletar a sugestão do autor: "{{ sugestion.nome }}"?</p>
+            </div>
+            <div>
+                <form action="{% url 'sugestion_delete' pk=object.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Confirmar</button>
+                    </form>
+            </div>
+            
+           
+        </div>
+        
+    </main>
+    
+    {% include 'produtos/partials/footer.html' %}
 </body>
 </html>
