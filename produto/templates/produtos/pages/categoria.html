@@ -1,0 +1,23 @@
+{% load static %}
+
+{% include 'produtos/partials/head.html' %}
+
+{% include 'produtos/partials/header.html' %}
+
+
+<div class="content_box">
+    <div class="produtos">
+    {% for produto in produtos %}
+        {% if produto.categoria == categoria %}
+            <div class="image_box_pref">
+                <img src="{{ produto.image.url }}" class="imagens_preferidos" alt="">
+                <h4 class="prefer_titles">{{ produto.nome }}</h4>
+                <p>R$ {{ produto.preco }}</p>
+                <button class="bot_comprar">Comprar</button>
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+{% include 'produtos/partials/footer.html' %}
