@@ -1,62 +1,17 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% include 'produtos/partials/head.html' %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de roupas street">
-    <meta name="keywords" content="roupas, street, oversized, skatista, moletons, confortável">
-    <meta name="author" content="Kaio Nóbrega, Felipe Marinho">
-    <link rel="stylesheet"  href="{% static 'produto/css/styles.css' %}">
-
-    <title>EMBER</title>
-
-</head>
 <body>
 
-    <header>     
-        <nav class="navbar navbar-dark bg-dark">		
-            <div class="titulo">
-                <a href="">EMBER</a>
-            </div>
-
-            <div class="barra-pesquisa">
-                <input class="caixa-pesquisa" type="text" placeholder="O que está procurando?" style="text-indent: 10px">
-
-                <button class="botao-pesquisa">
-                    <svg class="icon-inline icon-lg svg-icon-text" viewBox="0 0 512 512"><path d="M496.37,453.94l-94.53-94.53c25.99-35.85,41.49-79.79,41.49-127.45,0-120.18-97.42-217.6-217.6-217.6S8.13,111.78,8.13,231.96s97.42,217.6,217.6,217.6c54.04,0,103.38-19.82,141.42-52.43l93.01,93.02c10,10,26.21,10,36.2,0,10-10,10-26.21,0-36.2Zm-270.64-55.59c-91.9,0-166.4-74.5-166.4-166.4S133.83,65.56,225.73,65.56s166.4,74.5,166.4,166.4-74.5,166.4-166.4,166.4Z"></path></svg>
-                </button>
-            </div>
-
-            <div class="botoes-login">
-                <button type="button" class="btn btn-dark">
-                    <a href="{% url 'login' %}">
-                        Login
-                    </a>
-                </button>
-                <button type="button" class="btn btn-dark">
-                    <a href ="{% url 'cadastro'%}">
-                    Cadastro
-                    </a>
-                </button>
-            </div>
-		</nav>
-        
-    </header>
-
-
+    {% include 'produtos/partials/header.html' %}
+    
     <main>
         <div class="nome-categoria">
             <h2 id="categoria"><strong>CATEGORIA</strong></h2>
             <div class="categoria">
                 <div class="item-categoria">
-                    <a href="">
+                    <a href="{% url 'categoria' 'Oversized' %}">
                         <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691632444112-1043750359-f2ea8570fbe0e0c74e4030e3c1f176bf1691632446-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 1">
                     </a>
                     <div class="descricao-item-categoria">
@@ -64,7 +19,7 @@
                     </div>
                 </div>
                 <div class="item-categoria">
-                    <a href="">
+                    <a href="{% url 'categoria' 'Shorts' %}">
                         <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691633749798-1662550278-12e0c246f3da59e1f40f7b47ee9962211691633752-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 5">
                     </a>
                     <div class="descricao-item-categoria">
@@ -72,7 +27,7 @@
                     </div>
                 </div>
                 <div class="item-categoria">
-                    <a href="">
+                    <a href="{% url 'categoria' 'Sueter' %}">
                         <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691633749798-8173068842-c37f4382f5a0cc3e49c6f86a0664d7c71691633753-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 6">
                     </a>             
                     <div class="descricao-item-categoria">
@@ -80,7 +35,7 @@
                     </div>
                 </div>
                 <div class="item-categoria">
-                    <a href="">
+                    <a href="{% url 'categoria' 'Acessorios' %}">
                         <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691633749798-4949154578-da042cc109839bef7c8c0080abdf17321691633751-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 3">
                     </a>
                     <div class="descricao-item-categoria">
@@ -89,29 +44,24 @@
                 </div>
             </div>
         </div>
-
-            <section class="third_section">
-                <h2 id="desejados">ITENS MAIS DESEJADOS</h2>
-                <div class="content_box">
-                    <div class="produtos">
-                        
-                        {% for produto in produtos %}
-
-                        <div class="image_box_pref">
-                            <img src="{{ produto.image.url }}" class="imagens_preferidos" alt="">
-                            <h4 class="prefer_titles">{{ produto.nome }}</h4>
-                            <p>R$ {{ produto.preco }}</p>
-                            <button class="bot_comprar">Comprar</button>
-                        </div>
         
+        <section class="third_section">
+            <h2 id="desejados">ITENS MAIS DESEJADOS</h2>
+            <div class="content_box">
+                <div class="produtos">
+                    
+                    {% for produto in produtos %}
 
-                        {% endfor %}
+                    <div class="image_box_pref">
+                        <img src="{{ produto.image.url }}" class="imagens_preferidos" alt="">
+                        <h4 class="prefer_titles">{{ produto.nome }}</h4>
+                        <p>R$ {{ produto.preco }}</p>
+                        <button class="bot_comprar">Comprar</button>
                     </div>
-
-
+                    {% endfor %}
                 </div>
-
-            </section>
+            </div>
+        </section>
 
         <section id="second_section">
             <div class="sect left">
@@ -152,43 +102,10 @@
                 </div>
             </div>
         </section>
-        <section id="redes_sociais">
-            <div id="conteudo_redes">
-                <h2>CONHEÇA NOSSAS REDES SOCIAIS</h2>
-                <p>Esteja conectado conosco para conhecer nossas rotinas de marketing, brainstorming e produção.</p>
-                <div id="icone_redes">
-                    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/4494/4494468.png" alt="instagram" class="icones ig"></a>
-                    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/4494/4494467.png" alt="youtube" class="icones yt" ></a>
-                    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/4494/4494470.png" alt="whatsapp" class="icones wpp"></a>
-                </div>
-            </div>
-        </section>      
     </main>
 
 
-    <footer>
-        <section class="receba-informacoes">
-            <div class="infomacoes">
-                <h1>Receba Todas as informações</h1>
-                <p>Assine e receba todas as ofertas</p>
-            </div>
-            <div class="form_box">
-                <div class="caixa-email">
-                    <input type="email" class="inp email_box" name="email" placeholder="E-mail">
-                </div>
-                
-                <div class="botao-email">
-                    <button type="button" class="btn btn-dark" id="botao_enviar">Enviar</button>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
-        <div class="assinatura">
-            Developed by Kaio Nóbrega | Felipe Marinho
-        </div>
-    </footer>
+    {% include 'produtos/partials/footer.html' %}
 
     <script  src="{% static 'produto/js/script.js' %}"></script>
 
