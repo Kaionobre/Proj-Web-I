@@ -8,12 +8,19 @@
     <link rel="stylesheet" href="{% static 'sugestion/css/sugestionlist.css' %}">
 </head>
 <body>
-    <h1>LISTA DE SUGESTÕES:</h1>
+    <h1> Galeria de Sugestões:</h1>
+    <a href="{% url 'sugestion_create' %}">Criar</a>
     <ul>
         {% for sugestion in sugestion %}
-            <li><a href="{% url 'sugestion_detail' pk=sugestion.pk %}">{{sugestion.nome }}</a></li>
+            <li>Autor - {{sugestion.nome }}
+                <a href="{% url 'sugestion_detail' pk=sugestion.pk %}">Detalhes</a>
+                <a href="{% url 'sugestion_edit' pk=sugestion.pk %}">Editar</a>
+                <a href="{% url 'sugestion_delete' pk=sugestion.pk %}">Excluir</a>
+            </li>
         {% endfor %}
     </ul>
-       
+    <footer>
+        <p>&copy; 2024 EMBER. Desenvolvido por Kaio Nóbrega e Felipe Marinho.</p>
+    </footer>
 </body>
 </html>
