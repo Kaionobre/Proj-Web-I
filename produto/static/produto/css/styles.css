@@ -283,14 +283,21 @@ hr{
     border: none;
     margin-left: 2rem;
     margin-top: 1rem;
-    
+
+}
+
+.botoes_roupas a{
+    text-decoration: none;
+    color: black;
+}
+
+.botoes_roupas a:hover{
+    color: white;
 }
 
 .botoes_roupas:hover{
     transition: 0.2s ease-in;
     background-color: #000000;
-    color: white;
-
 }
 
 .interacao_content{
