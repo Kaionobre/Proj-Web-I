@@ -2,25 +2,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sugestões</title>
+
+    {% include 'produtos/partials/head.html' %}
+    
     <link rel="stylesheet" href="{% static 'sugestion/css/sugestionlist.css' %}">
 </head>
 <body>
-    <h1> Galeria de Sugestões:</h1>
-    <a href="{% url 'sugestion_create' %}">Criar</a>
-    <ul>
-        {% for sugestion in sugestion %}
-            <li>Autor - {{sugestion.nome }}
-                <a href="{% url 'sugestion_detail' pk=sugestion.pk %}">Detalhes</a>
-                <a href="{% url 'sugestion_edit' pk=sugestion.pk %}">Editar</a>
-                <a href="{% url 'sugestion_delete' pk=sugestion.pk %}">Excluir</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <footer>
-        <p>&copy; 2024 EMBER. Desenvolvido por Kaio Nóbrega e Felipe Marinho.</p>
-    </footer>
+    {% include 'produtos/partials/header.html' %}
+    <main>
+        <div class="main_content_box">
+
+            <div class="titulo_container">
+                <h1 id="titulo_pag"> Galeria de Sugestões:</h1>
+            </div>
+
+            <div class="criar_container">
+                <a href="{% url 'sugestion_create' %}" class="botao criar">Criar</a>
+            </div>
+
+            <div class="lista_sugestoes_cont">
+                <ul>
+                    {% for sugestion in sugestion %}
+                        <li class="item_lista"> AUTOR - {{sugestion.nome }} 
+                            <a class="botao detalhes" href="{% url 'sugestion_detail' pk=sugestion.pk %}" >Detalhes</a>
+                            <a class="botao editar" href="{% url 'sugestion_edit' pk=sugestion.pk %}">Editar</a>
+                            <a class="botao excluir" href="{% url 'sugestion_delete' pk=sugestion.pk %}">Excluir</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+    {% include 'produtos/partials/footer.html' %}
 </body>
 </html>
