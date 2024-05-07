@@ -2,19 +2,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sugestão: {{ sugestion.nome }}</title>
+    {% include 'produtos/partials/head.html' %}
     <link rel="stylesheet" href="{% static 'sugestion/css/sugestiondetail.css' %}">
 </head>
 <body>
-    <h1>AUTOR DA SUGESTÃO: {{ sugestion.nome }}</h1>
-    <p>Descrição: {{ sugestion.descricao }}</p>
-    {% if sugestion.image %}
-        <img src="{{ sugestion.image.url }}" alt="{{ sugestion.nome }}">
-    {% endif %}
-    <footer>
-        <p>&copy; 2024 EMBER. Desenvolvido por Kaio Nóbrega e Felipe Marinho.</p>
-    </footer>
+    {% include 'produtos/partials/header.html' %}
+    <main class="main">
+        <a href="{% url 'sugestion_list' %}"  class="botao-voltar"> &lt; </a>
+        <div class="main-content">
+            
+            <div class="titulo-sug">
+                <h1>AUTOR DA SUGESTÃO: {{ sugestion.nome }}</h1>
+            </div>
+            <div class="detail-content">
+                <div class="limite_txt">
+                    <p>Descrição: {{ sugestion.descricao }}</p>
+                </div>
+                {% if sugestion.image %}
+                    <img src="{{ sugestion.image.url }}" alt="{{ sugestion.nome }}" class="img_form">
+                {% endif %}
+    
+            </div>
+           
+        </div>
+    </main>
+    {% include 'produtos/partials/footer.html' %}
 </body>
 </html>

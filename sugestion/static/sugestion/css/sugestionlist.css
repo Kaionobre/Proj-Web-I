@@ -44,13 +44,19 @@ li {
     color: black;
 }
 
+.botao:hover{
+    color: rgb(131, 131, 131);
+    text-shadow:  0px 0px 5px -1px rgba(204,204,204,1);;
+}
+
 .lista_sugestoes_cont{
     box-shadow: 0px 6px 5px -1px rgba(204,204,204,1);
     display: flex;
     justify-content: flex-start;
-
+    transition: 0.2s ease-in-out;
     padding: 20px;
 }
+
 
 .item_lista{
     background-color: rgb(233, 233, 233);

@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.main_content_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+h1{
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.formulario_criacao{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'roboto';
+    box-shadow: 0px 6px 5px -1px rgba(204,204,204,1);
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.alteracoes{
+    border: none;
+    width: 150px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.alteracoes:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 6px 5px -1px rgba(204,204,204,1);
+}

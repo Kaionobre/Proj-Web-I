@@ -12,17 +12,17 @@
     <main>
         <div class="main_content">
 
-            <div class="titulo_delete">
+            <div class="titulo-delete">
                 <h1 class="titulo_delete">Deletar Sugestão</h1>
             </div>
 
             <div>
                 <p class="texto_delete">Gostaria mesmo de deletar a sugestão do autor: "{{ sugestion.nome }}"?</p>
             </div>
-            <div>
+            <div class="div-do-botao">
                 <form action="{% url 'sugestion_delete' pk=object.pk %}" method="post">
                     {% csrf_token %}
-                    <button type="submit">Confirmar</button>
+                    <button type="submit" class="botao-conf">Confirmar</button>
                     </form>
             </div>
             
