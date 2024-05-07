@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="60" viewBox="0 0 100 60">
+  <!-- Corpo do cartão -->
+  <rect width="100" height="60" rx="5" ry="5" fill="#000" stroke="#000" stroke-width="1"/>
+  <!-- Chip -->
+  <rect x="10" y="20" width="20" height="15" rx="2" ry="2" fill="#FFF" stroke="#000" stroke-width="1"/>
+  <!-- Faixa magnética -->
+  <rect x="10" y="45" width="80" height="5" fill="#FFF" stroke="#000" stroke-width="1"/>
+  <!-- Números do cartão (exemplo) -->
+  <text x="15" y="35" font-family="Arial" font-size="10" fill="#FFF">1234 5678 9012 3456</text>
+  <!-- Logo da bandeira (exemplo) -->
+  <text x="70" y="55" font-family="Arial" font-size="8" fill="#FFF">VISA</text>
+</svg>

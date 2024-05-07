@@ -7,43 +7,8 @@
     {% include 'produtos/partials/header.html' %}
     
     <main>
-        <div class="nome-categoria">
-            <h2 id="categoria"><strong>CATEGORIA</strong></h2>
-            <div class="categoria">
-                <div class="item-categoria">
-                    <a href="{% url 'categoria' 'Oversized' %}">
-                        <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691632444112-1043750359-f2ea8570fbe0e0c74e4030e3c1f176bf1691632446-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 1">
-                    </a>
-                    <div class="descricao-item-categoria">
-                        Oversized
-                    </div>
-                </div>
-                <div class="item-categoria">
-                    <a href="{% url 'categoria' 'Shorts' %}">
-                        <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691633749798-1662550278-12e0c246f3da59e1f40f7b47ee9962211691633752-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 5">
-                    </a>
-                    <div class="descricao-item-categoria">
-                        Shorts
-                    </div>
-                </div>
-                <div class="item-categoria">
-                    <a href="{% url 'categoria' 'Sueter' %}">
-                        <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691633749798-8173068842-c37f4382f5a0cc3e49c6f86a0664d7c71691633753-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 6">
-                    </a>             
-                    <div class="descricao-item-categoria">
-                        Suéter
-                    </div>
-                </div>
-                <div class="item-categoria">
-                    <a href="{% url 'categoria' 'Acessorios' %}">
-                        <img src="//acdn.mitiendanube.com/stores/119/911/themes/lima/1-slide-1691633749798-4949154578-da042cc109839bef7c8c0080abdf17321691633751-240-0.webp?1386489964" class="swiper-lazy swiper-lazy-loaded" alt="Categoria 3">
-                    </a>
-                    <div class="descricao-item-categoria">
-                        Acessórios
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        {% include 'produtos/partials/categorias.html' %}
         
         <section class="third_section">
             <h2 id="desejados">ITENS MAIS DESEJADOS</h2>
@@ -63,21 +28,8 @@
             </div>
         </section>
 
-        <section id="second_section">
-            <div class="sect left">
-                <h2 id="time">CONHEÇA NOSSO TIME</h2>
-                <h4>Kev Strength</h4>
-                <p>Proprietário da @kontrolledinsanity @hugesupplements: kev Saúde mental em primeiro lugar. Motivação interna NATURAL. <br>
-                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nemo fuga. Ut sunt inventore accusantium asperiores! Ducimus rerum aspernatur, laborum ut autem mollitia sequi nam nemo ipsum, magni et accusamus!</p>
-                <h4 id="tit_shizzy">Shizzy</h4>
-                <p>Atleta de bodybuilding dono da marca @YOUNGLA. Influenciador digital do mundo fitness, famoso por seu estilo focado em vestuário street e alternativo. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repudiandae quae facilis eius modi! Temporibus, autem consequatur. Ratione quia, doloremque asperiores enim excepturi sequi eligendi, reiciendis possimus ipsam, maiores provident!</p>
-            </div>
-            <div class="sect right">
-                <img src="https://th.bing.com/th/id/OIP.ONXdyx4_Y1gLOEAp94yjgwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="kev" class="images kev">
+        {% include 'produtos/partials/time-ember.html' %}
 
-                <img src="https://www.sport-equipements.fr/wp-content/uploads/2023/08/shizzy.jpg" alt="shizzy" class=" images shiz">
-            </div>
-        </section>
         <section class="interacao_cliente">
             <div class="interacao_content">
                 <p>Clique para acessar a página de sugestões:</p>
@@ -86,24 +38,10 @@
                 </button>
             </div>
         </section>
-        <section class="mais-informacoes">
-            
-            <div class="caixa-informacoes">
-                <div class="item-caixa-informacoes">
-                    <img class="caminhao-frete" src="frete.svg" alt="">
-                    <h3>Frete Grátis acima de R$300</h3>
-                    <p>Enviamos para todo Brasil</p>
-                </div>
 
-                <div class="item-caixa-informacoes">
-                    <img class="cartao-credito" src="cartao.svg" alt="">
-                    <h3>Pague via Mercado Pago</h3>
-                    <p>com pix, cartão ou boleto</p>
-                </div>
-            </div>
-        </section>
+        {% include 'produtos/partials/info-pagamento.html' %}
+
     </main>
-
 
     {% include 'produtos/partials/footer.html' %}
 

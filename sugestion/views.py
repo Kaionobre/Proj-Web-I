@@ -6,6 +6,7 @@ from .models import Sugestion
 
 # Create your views here.
 
+
 class SugestionCreateView(CreateView):
     model = Sugestion
     fields = ['nome', 'descricao', 'image']
